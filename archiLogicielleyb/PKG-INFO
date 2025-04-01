@@ -1,0 +1,26 @@
+Metadata-Version: 2.4
+Name: archilog
+Version: 0.1
+Summary: A simple project for educational purpose.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: click>=8.1.7
+
+# archilog
+
+A simple project for educational purpose.
+
+```bash
+$ uv sync           # install project dependencies
+$ uv run archilog   # run the project
+Usage: archilog [OPTIONS] COMMAND [ARGS]...
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  display
+```
+
+Course & examples : [https://kathode.neocities.org](https://kathode.neocities.org)
+
