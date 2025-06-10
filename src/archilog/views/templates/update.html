@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Entry</title>
+</head>
+<body>
+    <h1>Update Entry</h1>
+    <form method="POST" action="{{ url_for('web_ui.update_entry', id=entry.id) }}">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.name.label }}: {{ form.name() }}
+        </div>
+        <div>
+            {{ form.montant.label }}: {{ form.montant() }}
+        </div>
+        <div>
+            {{ form.category.label }}: {{ form.category() }}
+        </div>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
