@@ -1,0 +1,16 @@
+[project]
+name = "archilog"
+version = "0.1"
+description = "A simple project for educational purpose."
+readme = "README.md"
+dependencies = ["click>=8.1.7"]
+requires-python = ">=3.10"
+
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
+
+
+[project.scripts]
+archilog = "archilog:cli"

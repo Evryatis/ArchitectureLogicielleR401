@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hello from Flask</title>
+</head>
+<body>
+    <h1> Listes des entrées :</h1>
+    <table border="1">
+        <td>
+            <th>Identifiant</th>
+            <th>Nom</th>
+            <th>Date</th>
+            <th>Montant de la Transaction</th>
+            <th>Categorie</th>
+            <th>Der. MAJ</th>
+            <th>Effacer</th>
+        </td>
+        {% for entry in entries %}
+        <tr>
+            <td>{{ entry.id }}</td>
+            <td>{{ entry.name }}</td>
+            <td>{{ entry.date }}</td>
+            <td>{{ entry.montant }}</td>
+            <td>{{ entry.categorie }}</td>
+            <td>
+                <a href="{{ url_for('web_ui.delete_entry', id=entry.id) }}">Supprimer l'entrée</a>
+            </td>
+            <td>
+                <a href="{{ url_for('web_ui.update_entry', id=entry.id) }}">Modifier l'entrée</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p>
+        <a href="{{ url_for('web_ui.create_entry') }}">Créer une nouvelle entrée d'achat</a>
+        <br>
+        <a href="{{ url_for('web_ui.export_csv') }}" download>  Télécharger un CSV</a>
+        <br>
+    </p>
+</body>
+</html>
